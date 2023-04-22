@@ -1,0 +1,63 @@
+.welcome {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.subscription-manager {
+    margin-top: 100px;
+
+    border-radius: 8px;
+    width: 400px;
+    padding: 32px;
+    box-shadow: 0 0px 4px #aaaaaa;
+}
+
+.subscription-manager form {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subscription-manager .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.subscription-manager input {
+    border: solid 1px #e1e1e1;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+.subscription-manager input.has-error {
+    border-color: red;
+}
+
+.subscription-manager input.has-error + span {
+    display: block;
+}
+
+.subscription-manager span {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+.subscription-manager button {
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #e1e1e1;
+}
+
+.subscription-manager button:hover {
+    background-color: #dfdfdf;
+}
