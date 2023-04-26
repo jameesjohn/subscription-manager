@@ -1,0 +1,54 @@
+.dashboard {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.subscriber-list {
+    margin-top: 100px;
+
+    border-radius: 8px;
+    width: 1024px;
+    padding: 32px;
+    box-shadow: 0 0 4px #aaaaaa;
+}
+
+.subscriber-list section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+section header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-btn {
+    border-color: #c1c1c1;
+    background-color: #e1e1e1;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+.add-btn:hover {
+    border-color: #b1b1b1;
+    background-color: #d1d1d1;
+}
+
+.subscribers button, .subscribers .btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn.edit {
+    background-color: #fbaf2e;
+}
+button.delete {
+    background-color: #c11f1f;
+    color: white;
+}

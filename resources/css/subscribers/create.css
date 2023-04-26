@@ -1,0 +1,10 @@
+.create-subscriber {
+    margin-top: 100px;
+    width: 500px;
+}
+
+.create-subscriber form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

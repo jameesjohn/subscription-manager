@@ -20,7 +20,7 @@
             }
         </style>
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/welcome.css', 'resources/js/app.js'])
     </head>
 
     <body class="welcome">

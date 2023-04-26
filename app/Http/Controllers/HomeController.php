@@ -15,13 +15,4 @@ class HomeController extends Controller
 
         return view('welcome');
     }
-
-    public function dashboard() {
-        $apiKey = ApiKey::first();
-        if (!$apiKey) {
-            return redirect()->route('home');
-        }
-
-        return view('dashboard');
-    }
 }

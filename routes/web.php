@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SubscriberController;
 use App\Http\Middleware\EnsureApiKeyExist;
 use App\Http\Middleware\RedirectIfApiKeyExist;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,10 @@ Route::get('/', [HomeController::class, 'home'])
     ->name('home')
     ->middleware(RedirectIfApiKeyExist::class);
 
-Route::get('/dashboard', [HomeController::class, 'dashboard'])
-    ->name('dashboard')
-    ->middleware(EnsureApiKeyExist::class);
+Route::get('/subscribers',
+    [SubscriberController::class, 'index'])->name('subscribers.index');
+Route::get('/subscribers/create',
+    [SubscriberController::class, 'create'])->name('subscribers.create');
+Route::get('/subscribers/{id}/edit', [SubscriberController::class, 'edit']);
+
+//Route::

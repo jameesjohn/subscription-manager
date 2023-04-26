@@ -2,13 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\ApiKey;
 use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class RedirectIfApiKeyExist
+class JsonMiddleware
 {
     /**
      * Handle an incoming request.
@@ -19,11 +18,7 @@ class RedirectIfApiKeyExist
      */
     public function handle(Request $request, Closure $next)
     {
-        $apiKey = ApiKey::first();
-        if ($apiKey) {
-            return redirect()->route('subscribers.index');
-        }
-
+        $request->headers->set("Accept", "application/json");
         return $next($request);
     }
 }

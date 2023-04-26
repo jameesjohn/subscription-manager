@@ -3,27 +3,29 @@
 namespace App\Http\Middleware;
 
 use App\Models\ApiKey;
+use App\Utilities\ApiUtility;
 use Closure;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Response;
 
-class RedirectIfApiKeyExist
+class RequireApiKey
 {
     /**
      * Handle an incoming request.
      *
      * @param Request $request
-     * @param Closure(Request): (Response|RedirectResponse) $next
-     * @return Response|RedirectResponse
+     * @param Closure(Request): (\Illuminate\Http\Response|RedirectResponse) $next
+     * @return JsonResponse
      */
     public function handle(Request $request, Closure $next)
     {
         $apiKey = ApiKey::first();
-        if ($apiKey) {
-            return redirect()->route('subscribers.index');
-        }
 
+        if (!$apiKey) {
+            return ApiUtility::badRequest('API key not found');
+        }
         return $next($request);
     }
 }

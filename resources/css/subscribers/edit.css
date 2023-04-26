@@ -1,0 +1,10 @@
+.edit-subscriber {
+    margin-top: 100px;
+    width: 500px;
+}
+
+.edit-subscriber form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

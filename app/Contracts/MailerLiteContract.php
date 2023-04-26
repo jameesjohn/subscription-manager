@@ -9,17 +9,23 @@ use Illuminate\Http\Client\Response;
 
 interface MailerLiteContract
 {
-    public function listSubscribers(): PromiseInterface|Response;
+    public function listSubscribers(
+        int $length,
+        string $cursor
+    ): HttpResponseModel;
 
-    public function createSubscriber(SubscriberModel $subscriberModel): HttpResponseModel;
+    public function createSubscriber(SubscriberModel $subscriber
+    ): HttpResponseModel;
 
-    public function updateSubscriber(string $subscriberId, SubscriberModel $subscriber): HttpResponseModel;
+    public function updateSubscriber(
+        string $subscriberId,
+        SubscriberModel $subscriber
+    ): HttpResponseModel;
 
-    public function getSingleSubscriber(string $subscriberId): HttpResponseModel;
+    public function getSingleSubscriber(string $subscriberId
+    ): HttpResponseModel;
 
-    public function getTotalNumberOfSubscribers(): PromiseInterface|Response;
+    public function getTotalNumberOfSubscribers(): HttpResponseModel;
 
     public function deleteSubscriber(string $subscriberId): HttpResponseModel;
-
-    public function forgetSubscriber(string $subscriberId): HttpResponseModel;
 }

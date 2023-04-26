@@ -1,52 +1,39 @@
-.welcome {
+body {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding: 62px;
 }
-.subscription-manager {
-    margin-top: 100px;
 
+.card {
     border-radius: 8px;
-    width: 400px;
     padding: 32px;
-    box-shadow: 0 0px 4px #aaaaaa;
-}
+    box-shadow: 0 0 4px #aaaaaa;
 
-.subscription-manager form {
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
+}
+.btn {
+    border-color: #c1c1c1;
+    background-color: #e1e1e1;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-.subscription-manager .form-group {
+.btn:hover {
+    border-color: #b1b1b1;
+    background-color: #d1d1d1;
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.subscription-manager input {
-    border: solid 1px #e1e1e1;
-    height: 40px;
-    border-radius: 6px;
-    padding: 0 8px;
-}
-
-.subscription-manager input.has-error {
-    border-color: red;
-}
-
-.subscription-manager input.has-error + span {
-    display: block;
-}
-
-.subscription-manager span {
-    display: none;
-    color: red;
-    font-size: 12px;
-}
-
-.subscription-manager button {
+.form-group button {
     height: 40px;
     border-radius: 6px;
     cursor: pointer;
@@ -58,6 +45,32 @@
     border: solid 1px #e1e1e1;
 }
 
-.subscription-manager button:hover {
+.form-group button:hover {
     background-color: #dfdfdf;
 }
+
+.form-group.submit-btn {
+    margin-top: 32px;
+}
+
+.form-group input {
+    border: solid 1px #e1e1e1;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 8px;
+}
+
+.form-group input.has-error {
+    border-color: red;
+}
+
+.form-group input.has-error + span {
+    display: block;
+}
+
+.form-group span {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
