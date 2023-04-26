@@ -15,6 +15,7 @@ subscribers.
 - Make a copy of the environment file, `.env.example` and update the database
   connection
   credentials as required.
+- Run `php artisan key:gen` to generate the app key.
 - Next, we need to run the `init.sql` file which can be found
   at `database/seeders/init.sql`.
   This file contains the required database initializations necessary for our app

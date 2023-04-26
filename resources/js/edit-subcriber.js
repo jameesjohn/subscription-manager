@@ -1,4 +1,4 @@
-(function editSubscriber(){
+(function editSubscriber() {
     const editSection = document.querySelector(".edit-subscriber");
 
     if (!editSection) {
@@ -14,11 +14,11 @@
     function handleFormSubmit(event) {
         event.preventDefault();
 
-        const subscriberId = form.getAttribute('x-subscriberId');
+        const subscriberId = form.getAttribute('data-subscriberId');
         const formBtn = form.querySelector('button');
 
         const formData = new FormData(form);
-        const data =  {
+        const data = {
             name: formData.get('name'),
             country: formData.get('country')
         }
@@ -32,7 +32,7 @@
             .catch(({response}) => {
                 alert(response.data.message);
             }).finally(() => {
-                formBtn.textContent = 'Update'
+            formBtn.textContent = 'Update'
         })
 
     }

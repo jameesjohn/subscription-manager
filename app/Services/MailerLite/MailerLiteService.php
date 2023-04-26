@@ -18,7 +18,7 @@ class MailerLiteService implements MailerLiteContract
     public function __construct(string $apiKey)
     {
         $this->apiKey = $apiKey;
-        $this->baseUrl = config("services.mailerlite.base_url");
+        $this->baseUrl = config("services.mailerlite.base_url") ?: "https://connect.mailerlite.com/api";
 
         $this->request = Http::baseUrl($this->baseUrl)
             ->withToken($this->apiKey);

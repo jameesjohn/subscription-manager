@@ -26,7 +26,7 @@ class MailerLiteAdapter
     {
         $response = $this->service->getTotalNumberOfSubscribers();
 
-        return !$response->status;
+        return $response->status;
     }
 
     public function getTotalSubscribers(): int

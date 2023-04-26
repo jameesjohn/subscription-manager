@@ -393,7 +393,7 @@
         <h1>Edit {{$subscriber->name}}</h1>
     </header>
 
-    <form x-subscriberId="{{$subscriber->id}}">
+    <form data-subscriberId="{{$subscriber->id}}">
         <div class="form-group">
             <label for="name">Enter Name</label>
             <input id="name" name="name" type="text"
