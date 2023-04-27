@@ -16,7 +16,8 @@ subscribers.
   connection
   credentials as required.
 - Run `php artisan key:gen` to generate the app key.
-- Next, we need to run seeders which will run the `database/seeders/init.sql`
+- Next, we need to run seeders, `php artisan db:seed` which will run
+  the `database/seeders/init.sql`
   file to initialize the database.
 - Run `npm run dev` to compile all the javascript.
 - Run `php artisan serve` to start the application.
