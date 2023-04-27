@@ -16,11 +16,13 @@ subscribers.
   connection
   credentials as required.
 - Run `php artisan key:gen` to generate the app key.
-- Next, we need to run the `init.sql` file which can be found
-  at `database/seeders/init.sql`.
-  This file contains the required database initializations necessary for our app
-  to run.
+- Next, we need to run seeders which will run the `database/seeders/init.sql`
+  file to initialize the database.
 - Run `npm run dev` to compile all the javascript.
 - Run `php artisan serve` to start the application.
 - Voila, the application is now running at `http://localhost:8000/`.
+
+## Tests
+
+The subscriber API is well tested, and tests can be run via `php artisan test`.
 

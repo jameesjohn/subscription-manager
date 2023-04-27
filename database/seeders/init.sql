@@ -1,8 +1,7 @@
-CREATE DATABASE IF NOT EXISTS subscription_manager;
-
-CREATE TABLE IF NOT EXISTS `api_keys` (
-    `id` int NOT NULL AUTO_INCREMENT,
-    `key` TEXT NOT NULL,
+CREATE TABLE IF NOT EXISTS `api_keys`
+(
+    `id`         int AUTO_INCREMENT,
+    `key`        TEXT      NOT NULL,
     `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
